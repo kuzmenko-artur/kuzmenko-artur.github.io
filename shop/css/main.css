@@ -233,10 +233,8 @@ header * {
 }
 .card2__btn {
 	position: absolute;
-	right: 0;
 	bottom: -25px;
-	left: 0;
-	margin: auto;
+	left: 4.5rem;
 	border-radius: 100px;
 	color: #fff;
 	font-weight: 600;
@@ -480,6 +478,7 @@ header * {
 }
 .subscribe__email {
 	border: none;
+	outline: none;
 	border-radius: 100px;
 	color: #333;
 	font-size: 1.2rem;
@@ -488,7 +487,7 @@ header * {
 .subscribe__btn {
 	position: absolute;
 	top: 0.3rem;
-	right: 4rem;
+	right: 72px;
 	border-radius: 100px;
 	color: #fff;
 	font-weight: 600;
