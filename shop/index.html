@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <title>Big Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">  
@@ -18,11 +19,11 @@
       <img src="img/circle.png" class="circle-bg" alt="">
       <div class="container cont-relative">
         <div class="row">
-          <div class="col-sm-2">
-            <img src="img/logo.png" alt="Big Shop">
+          <div class="col-12 col-md-2">
+            <img src="img/logo.png" class="logo-center" alt="Big Shop">
           </div>
-          <div class="col-sm-4 ml-auto">
-            <div class="btn-group float-right btn-group-mdrn-font" role="group" aria-label="Basic example">
+          <div class="col-12 col-md-4 ml-auto">
+            <div class="btn-group float-md-right btn-group-mdrn-font logo-center" role="group" aria-label="Basic example">
               <button type="button" class="btn btn-rounded btn-group-mdrn btn-group-mdrn-1"><img src="img/icon-search.png" class="icon-search" alt="">Search</button>
               <button class="btn dropdown-toggle btn-rounded btn-group-mdrn btn-group-mdrn-arrow btn-group-mdrn-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collection</button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -33,25 +34,21 @@
                 <a class="dropdown-item" href="#">Cloth</a>
                 <a class="dropdown-item" href="#">Toys</a>
               </div>
+              <i class="fa fa-circle-o icon-1"></i>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-6 ml-auto">
+          <div class="col-12 m0p0">
             <div class="offer">
-              <h1 class="offer__title">Summer <span>Collection</span></h1>
+              <h1 class="offer__title">Summer <br><span>Collection</span></h1>
               <p class="offer__subtitle">25% <span>OFF</span></p>
+              <button type="button" class="btn btn-light btn-details">Details</button>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-6 ml-auto">
-            <button type="button" class="btn btn-light btn-details">Details</button>
-          </div>
-        </div>
-        <i class="fa fa-circle-o icon-1"></i>
-      	<i class="fa fa-square-o icon-2"></i>
       </div>
+      <i class="fa fa-square-o icon-2"></i>
     </header>
 
     <section id="trendy">
@@ -61,11 +58,12 @@
     				<div class="col-sm-12">
     					<div class="title text-center">
     						<h2 class="title__main">Trendy Arrivals</h2>
+                            <img src="img/icon5.png" alt="" class="trend_icon_5">
     					</div>
     				</div>
     			</div>
     			<div class="row">
-    				<div class="col-sm-4">
+    				<div class="col-md-6 col-xl-4">
     					<figure class="card2">
     						<div class="card2__like">
     							<img src="img/icon-like.png" alt="">
@@ -83,7 +81,7 @@
     						<button type="button" class="btn card2__btn">Add to Cart</button>
     					</figure>
     				</div>
-    				<div class="col-sm-4">
+    				<div class="col-md-6 col-md-6 col-xl-4">
     					<figure class="card2">
     						<div class="card2__like">
     							<img src="img/icon-like.png" alt="">
@@ -101,7 +99,7 @@
     						<button type="button" class="btn card2__btn">Add to Cart</button>
     					</figure>
     				</div>
-    				<div class="col-sm-4">
+    				<div class="col-md-6 col-xl-4">
     					<figure class="card2">
     						<div class="card2__like">
     							<img src="img/icon-like.png" alt="">
@@ -119,9 +117,7 @@
     						<button type="button" class="btn card2__btn">Add to Cart</button>
     					</figure>
     				</div>
-    			</div>
-     			<div class="row">
-    				<div class="col-sm-4">
+    				<div class="col-md-6 col-xl-4">
     					<figure class="card2">
     						<div class="card2__like">
     							<img src="img/icon-like.png" alt="">
@@ -131,7 +127,9 @@
     							<img src="img/icon-comment.png" alt="">
     							<p class="card2__quantity">298</p>
     						</div>
+                            <div class="wrap_image4">
     						<img src="img/bag-4.png" class="card2__image4" alt="">
+                            </div>
     						<figcaption class="card2__title">
     							<p class="card2__name">Simply Leather Bags</p>
     							<p class="card2__price">$ 15.20</p>
@@ -139,7 +137,7 @@
     						<button type="button" class="btn card2__btn">Add to Cart</button>
     					</figure>
     				</div>
-    				<div class="col-sm-4">
+    				<div class="col-md-6 col-xl-4">
     					<figure class="card2">
     						<div class="card2__like">
     							<img src="img/icon-like.png" alt="">
@@ -157,7 +155,7 @@
     						<button type="button" class="btn card2__btn">Add to Cart</button>
     					</figure>
     				</div>
-    				<div class="col-sm-4">
+    				<div class="col-md-6 col-xl-4">
     					<figure class="card2">
     						<div class="card2__like">
     							<img src="img/icon-like.png" alt="">
@@ -181,31 +179,32 @@
         <img src="img/icon2.png" alt="" class="trend_icon_2">
         <img src="img/icon3.png" alt="" class="trend_icon_3">
         <img src="img/icon4.png" alt="" class="trend_icon_4">
-        <img src="img/icon5.png" alt="" class="trend_icon_5">
         <img src="img/icon6.png" alt="" class="trend_icon_6">
     	</div>
     </section>
     <section id="phone">
     	<div class="container cont-phone">
     		<div class="row">
-    			<div class="col-sm-6 align-self-center">
+    			<div class="col-12 col-md-6 align-self-center">
     				<div class="phone">
-    					<h2 class="phone__title">
-    						Our Brands
-    					</h2>
+                        <div class="phone__block">
+        					<h2 class="phone__title">
+        						Our Brands
+        					</h2>
+                            <img src="img/icon7.png" alt="" class="trend_icon_7">
+                        </div>
     					<p class="phone__subtitle">
     						Small Shoes 2017 new Arrivals mini <br> Messenger <span>Classic Shoes</span>
     					</p>
     					<small class="phone__text">
-    						In porttitor elit ac mi placerat hendrerit. Morbi accumsan, erat in <br>ullamcorper consectetur, nisi erat efficitur eros, sagittis tristique <br>odio turpis vitae dui. Vestibulum gravida est ut erat pretium, non <br>pretium diam feugiat. Integer egestas suscipit lorem ac fermentum. <br>Integer at mauris vitae justo sagittis dapibus. Pellentesque sit amet <br>nisl vitae orci vehicula faucibus. Fusce et lat, feugiat est. 
+    						In porttitor elit ac mi placerat hendrerit. Morbi accumsan, erat in ullamcorper consectetur, nisi erat efficitur eros, sagittis tristique odio turpis vitae dui. Vestibulum gravida est ut erat pretium, non pretium diam feugiat. Integer egestas suscipit lorem ac fermentum. Integer at mauris vitae justo sagittis dapibus. Pellentesque sit amet nisl vitae orci vehicula faucibus. Fusce et lat, feugiat est. 
     					</small>
     				</div>
     			</div>
-    			<div class="col-sm-6">
+    			<div class="d-none d-md-block col-md-6">
     				<img src="img/pnone.png" class="phone_image" alt="">
     			</div>
     		</div>
-    		<img src="img/icon7.png" alt="" class="trend_icon_7">
        		<img src="img/icon8.png" alt="" class="trend_icon_8">
        		<img src="img/icon9.png" alt="" class="trend_icon_9">
     	</div>
@@ -217,6 +216,7 @@
     				<div class="col-sm-12">
     					<div class="title text-center">
     						<h2 class="title__main">Our Showcase</h2>
+                            <img src="img/icon11.png" alt="" class="trend_icon_11">
     					</div>
     				</div>
     			</div>
@@ -231,6 +231,7 @@
     					      <a class="list-group-item list-group-item-action" id="list-cloth-list" data-toggle="list" href="#list-cloth" role="tab" aria-controls="cloth">Cloth</a>
     					      <a class="list-group-item list-group-item-action" id="list-toys-list" data-toggle="list" href="#list-toys" role="tab" aria-controls="toys">Toys</a>
     					    </div>
+                            <img src="img/icon12.png" alt="" class="trend_icon_12">
                         </div>
 				    </div>
 				</div>
@@ -241,7 +242,7 @@
 					      <div class="tab-pane fade" id="list-furnitures" role="tabpanel" aria-labelledby="list-furnitures-list">2</div>
 					      <div class="tab-pane fade show active" id="list-watches" role="tabpanel" aria-labelledby="list-watches-list">
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-md-6 col-xl-4">
                                     <figure class="card2">
                                         <div class="card2__like">
                                             <img src="img/icon-like.png" alt="">
@@ -259,7 +260,7 @@
                                         <button type="button" class="btn card2__btn">Add to Cart</button>
                                     </figure>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-md-6 col-xl-4">
                                     <figure class="card2">
                                         <div class="card2__like">
                                             <img src="img/icon-like.png" alt="">
@@ -277,7 +278,7 @@
                                         <button type="button" class="btn card2__btn">Add to Cart</button>
                                     </figure>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-md-6 col-xl-4">
                                     <figure class="card2">
                                         <div class="card2__like">
                                             <img src="img/icon-like.png" alt="">
@@ -295,9 +296,7 @@
                                         <button type="button" class="btn card2__btn">Add to Cart</button>
                                     </figure>
                                 </div>
-                            </div>
-                            <div class="row cardmr">
-                                <div class="col-sm-4">
+                                <div class="col-md-6 col-xl-4">
                                     <figure class="card2">
                                         <div class="card2__like">
                                             <img src="img/icon-like.png" alt="">
@@ -315,7 +314,7 @@
                                         <button type="button" class="btn card2__btn">Add to Cart</button>
                                     </figure>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-md-6 col-xl-4">
                                     <figure class="card2">
                                         <div class="card2__like">
                                             <img src="img/icon-like.png" alt="">
@@ -333,7 +332,7 @@
                                         <button type="button" class="btn card2__btn">Add to Cart</button>
                                     </figure>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-md-6 col-xl-4">
                                     <figure class="card2">
                                         <div class="card2__like">
                                             <img src="img/icon-like.png" alt="">
@@ -361,8 +360,6 @@
 				</div>
     		</div>
             <img src="img/icon10.png" alt="" class="trend_icon_10">
-            <img src="img/icon11.png" alt="" class="trend_icon_11">
-            <img src="img/icon12.png" alt="" class="trend_icon_12">
             <img src="img/icon13.png" alt="" class="trend_icon_13">
             <img src="img/icon14.png" alt="" class="trend_icon_14">
 
