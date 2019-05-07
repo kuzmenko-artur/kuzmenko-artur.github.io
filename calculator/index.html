@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Калькулятор стоимости штампов и печатей</title>
+</head>
+<body>
+	<div class="container mb-5">
+		<div class="row">
+			<div class="col-sm-3 mt-3 mb-2">
+				<h5 class="text-primary text-uppercase mb-0" style="line-height: 0.3;">Оформить заказ</h5>
+				<small>Главная</small>
+			</div>
+		</div>
+		<div class="row">
+		  <div class="col-sm-3 mb-1">
+		    <div class="list-group list-group-horizontal" id="list-tab" role="tablist">
+		      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Печать</a>
+		      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Штамп</a>
+		      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Факсимиле</a>
+		    </div>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-3 ml-3">
+		    <div class="tab-content" id="nav-tabContent">
+		      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+		      		<div class="form-group">
+		      			<label for="print1">Печать</label>
+						<select class="custom-select custom-select-sm" id="print1">
+						  <option selected></option>
+						  <option value="circle">Круглая</option>
+						  <option value="rectangle">Прямоугольная</option>
+						  <option value="square">Квадратная</option>
+						  <option value="triangle">Треугольная</option>
+						</select>
+		      			<label for="print2">Срочность</label>
+						<select class="custom-select custom-select-sm" id="print2">
+						  <option selected></option>
+						  <option value="fast_1">1 час</option>
+						  <option value="normal_1">1 день</option>
+						</select>
+		      			<label for="print3">Способ получения</label>
+						<select class="custom-select custom-select-sm" id="print3">
+						  <option selected></option>
+						  <option value="delivery_1">Курьерская доставка</option>
+						  <option value="pickup_1">Самовывоз</option>
+						</select>
+		      			<label for="print4">Материал</label>
+						<select class="custom-select custom-select-sm" id="print4">
+						  <option selected></option>
+						  <option value="rubber_1">Резина</option>
+						  <option value="polymer_1">Полимер</option>
+						</select>
+		      			<label for="print5">Оснастка</label>
+						<select class="custom-select custom-select-sm" id="print5">
+						  <option data-path="img/simple.png" selected></option>
+						  <option data-path="img/simple.png" value="simple_1">Простая</option>
+						  <option data-path="img/automatic.png" value="automatic_1">Автоматическая</option>
+						  <option data-path="img/metal.png" value="metal_1">Металлическая</option>
+						  <option data-path="img/pocket.png" value="pocket_1">Карманная</option>
+						</select>
+					</div>
+					<div id="selmimg2"><img class="img-thumbnail rounded mx-auto d-block mb-2" src="img/simple.png" /></div>
+					<p class="mb-1">Цена</p>
+					<div class="col-sm-12 bg-secondary rounded-sm text-center mb-4">
+						<p class="h2" id="stoimost"></p>
+					</div>
+					<input class="btn btn-primary float-right" type="submit" value="Посчитать" onclick="raschitat();">
+		      </div>
+		      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+		      	<div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+		      		<div class="form-group">
+		      			<label for="print1_2">Высота штампа</label>
+		      		    <div class="form-inline">
+    					<input type="text" class="col-sm-10 form-control form-control-sm" id="visota">
+    					<label for="print6" class="ml-1">мм</label>
+					    </div>
+					    <label for="print2_2">Ширина штампа</label>
+		      		    <div class="form-inline">
+    					<input type="text" class="col-sm-10 form-control form-control-sm" id="shirina">
+    					<label for="print7" class="ml-1">мм</label>
+					    </div>
+		      			<label for="print3_2">Срочность</label>
+						<select class="custom-select custom-select-sm" id="print3_2">
+						  <option selected></option>
+						  <option value="fast_2">1 час</option>
+						  <option value="normal_2">1 день</option>
+						</select>
+		      			<label for="print4_2">Способ получения</label>
+						<select class="custom-select custom-select-sm" id="print4_2">
+						  <option selected></option>
+						  <option value="delivery_2">Курьерская доставка</option>
+						  <option value="pickup_2">Самовывоз</option>
+						</select>
+		      			<label for="print5_2">Материал</label>
+						<select class="custom-select custom-select-sm" id="print5_2">
+						  <option selected></option>
+						  <option value="rubber_2">Резина</option>
+						  <option value="polymer_2">Полимер</option>
+						</select>
+		      			<label for="print6_2">Оснастка</label>
+						<select class="custom-select custom-select-sm" id="print6_2">
+						  <option data-path="img/simple.png" selected></option>
+						  <option data-path="img/simple.png" value="simple_2">Простая</option>
+						  <option data-path="img/automatic.png" value="automatic_2">Автоматическая</option>
+						  <option data-path="img/metal.png" value="metal_2">Металлическая</option>
+						  <option data-path="img/pocket.png" value="pocket_2">Карманная</option>
+						</select>
+					</div>		
+					<div id="selmimg"><img class="img-thumbnail rounded mx-auto d-block mb-2" src="img/simple.png" /></div>
+					<p class="mb-1">Цена</p>
+					<div class="col-sm-12 bg-secondary rounded-sm text-center mb-4">
+						<p class="h2" id="stoimost2"></p>
+					</div>
+					<input class="btn btn-primary float-right" type="submit" value="Посчитать" onclick="raschitat2();">
+		      </div>
+		      </div>
+		      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Здесь будет факсимиле</div>
+		    </div>
+		  </div>
+	    </div>
+    </div>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
