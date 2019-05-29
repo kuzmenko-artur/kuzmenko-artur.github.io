@@ -1,0 +1,220 @@
+@import "variables"
+
+*
+  padding: 0
+  margin: 0
+  font-family: ProximaNova
+  font-size: 14px
+  font-weight: 300
+  box-sizing: border-box
+
+.container-basis
+  width: 1280px
+  margin: 0 auto
+  background-color: #f7f7f7
+
+.product-wrapper
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-evenly
+  margin: 0 -15px
+
+.product
+  display: flex
+  flex-direction: column
+  flex-basis: 32%
+  background-color: #fff
+  min-height: 590px
+  margin: 10px 0
+  padding: 20px
+
+  &__article
+    display: flex
+    justify-content: flex-end
+  
+  &__photo-wrapper
+    display: flex
+    justify-content: center
+    margin-top: 38px
+
+  &__status
+    margin-top: 42px
+
+  &__description
+    flex-grow: 1
+    margin-top: 5px
+  
+  &__description-title
+    font-size: 18px
+    font-weight: normal
+    color: $black-light
+    text-decoration: none
+
+    &:hover
+      opacity: 0.8
+
+  &__description-subtitle
+    margin-top: 17px
+
+  &__description-subtitle-item
+    display: block
+    font-size: 12px
+    color: $warm-grey
+    line-height: 1.85
+
+    span
+      font-size: 12px
+      color: $greyish-brown
+
+  &__footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &:hover
+    height: 110%
+    box-shadow: 0 0 7px 1px $pinkish-grey
+    transform: translateY(-3px);
+    transition: 0.2s
+
+.article
+  font-size: 12px
+  color: $pinkish-grey
+
+.status
+  display: flex
+  font-size: 13px
+  color: $green
+
+  &__text
+    margin-left: 8px
+  
+  &--red
+    color: $red
+
+.btn
+  display: flex
+  justify-content: center
+  background-color: $cerulean
+  padding: 10px 15px
+  border: 0
+  outline: none
+  cursor: pointer
+
+  &__icon
+    margin-top: -3px
+    margin-right: 10px
+
+  &__text-white
+    color: #fff
+
+  &__text-gray
+    color: $gray-darkest
+
+  &__text--normal
+    font-weight: normal
+
+  &--width
+    flex-basis: 100%
+
+  &--margin-10pt
+    margin-top: 10px
+  
+  &--clean-bg
+    background-color: $white-smoke
+
+  &--buy-hover:hover
+    background-color: $deep-aqua
+
+  &--show-hover:hover
+    opacity: 0.8
+
+  &--clean-hover:hover
+    opacity: 0.8
+
+.assessment
+  display: flex
+  color: $pinkish-grey
+
+  &__like
+    display: block
+    margin-right: 10px
+    cursor: pointer
+
+    i
+      font-size: 19px
+
+    &:hover
+      color: red 
+
+  &__compare
+    display: block
+    cursor: pointer
+
+    i
+      font-size: 17px
+
+.navigation
+  display: flex
+  flex-direction: column
+  background-color: #fff
+  margin: 10px -5px 10px -15px
+  padding: 30px 28px
+
+  &__block
+    margin-top: 26px
+
+  &__title
+    font-size: 17px
+    font-weight: normal
+    color: $gray-darker
+
+  &__filter
+    margin-top: 15px
+    margin-left: 24px
+    display: flex
+    flex-wrap: wrap
+  
+  &__filter-item
+    display: block
+    flex-basis: 50%
+
+.label
+  color: $gray-darker
+  word-spacing: 80px
+  cursor: pointer
+
+input[type=checkbox]
+  display: none
+
+.label::before
+  content: ''
+  display: inline-block
+  position: relative
+  top: -2px
+  width: 16px
+  height: 16px
+  background-color: #fff
+  border: 1px solid $white
+  vertical-align: middle
+  margin: 5px 10px 5px -24px
+  transition: 0.2s
+  box-shadow: inset 0 2px 2px 0 $blackshadow7
+
+.label:hover::before
+  background-color: $gray-darker
+  opacity: 0.1
+
+input[type=checkbox]:checked + label::before
+  background-color: $blue-light
+  box-shadow: inset 0 1px 3px 0 $blackshadow32
+  border: none
+  content: url(../images/icons/check.png)
+  text-align: center
+
+.simple
+  color: red
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .product-wrapper
+    justify-content: space-around
