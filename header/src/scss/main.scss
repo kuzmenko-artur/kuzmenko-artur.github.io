@@ -1,0 +1,16 @@
+* {
+  font-family: $font-family;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+input[type='text'] {
+  box-sizing: border-box;
+
+  &::-ms-clear {
+    display: none;
+  }
+}

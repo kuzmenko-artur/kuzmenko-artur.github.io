@@ -1,0 +1,60 @@
+$bg-color:  $gray-lighten;
+$width:     10px;
+$height:    2px;
+
+.count {
+  display: flex;
+  height: 26px;
+  border-radius: $border-radius;
+  transform: perspective(1px);
+
+  &__btn {
+    @include hover-opacity-scale;
+    position: relative;
+    width: 21px;
+    height: 100%;
+    background: $white;
+    background-image: linear-gradient(to top, $gray-lightest 0%, $white 80%, $white 100%);
+    outline: none;
+    border: 1px solid $gray-lighter;
+    cursor: pointer;
+    transform: perspective(1px);
+
+    &--minus {
+
+      &::after {
+        @include pseudo-element-line($bg-color, $width, $height);
+      }
+    }
+
+    &--plus {
+
+      &::after {
+        @include pseudo-element-line($bg-color, $width, $height);
+      }
+
+      &::before {
+        @include pseudo-element-line($bg-color, $width, $height);
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__input {
+    width: 28px;
+    color: $gray-darker;
+    font-size: 13px;
+    text-align: center;
+    border-top: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
+    background: $white;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 1px 5px rgba(153, 153, 153, 0.35);
+    border-left: none;
+    border-right: none;
+    transform: perspective(1px);
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

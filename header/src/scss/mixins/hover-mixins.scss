@@ -1,0 +1,35 @@
+@mixin hover-scale {
+  transform: perspective(1px);
+  backface-visibility: hidden;
+  transition: transform $transition-time ease;
+
+  &:hover {
+    transform: scale($transform-scale-increase) perspective(1px);
+  }
+
+  &:active {
+    transform: scale($transform-scale-increase * 0.9) perspective(1px);
+  }
+}
+
+@mixin hover-opacity {
+  transition: opacity $transition-time ease;
+
+  &:hover {
+    opacity: $opacity;
+  }
+}
+
+@mixin hover-opacity-scale {
+  transform: perspective(1px);
+  backface-visibility: hidden;
+  transition: opacity $transition-time ease, transform $transition-time-fast ease;
+
+  &:hover {
+    opacity: $opacity;
+  }
+
+  &:active {
+    transform: scale($transform-scale-reduce) perspective(1px);
+  }
+}

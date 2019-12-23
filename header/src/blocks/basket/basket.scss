@@ -1,0 +1,109 @@
+.basket {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: $field-padding-vertical*2 $field-padding-horizontal*2;
+  background-color: $white;
+  border-radius: $border-radius;
+
+  &__caption {
+    font-size: 14px;
+    color: $gray;
+    text-align: center;
+    line-height: 20px;
+    padding-bottom: 6px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin: $field-padding-vertical*2 0;
+  }
+
+  &__action {
+    margin: $field-padding-vertical*2 0;
+    text-align: center;
+  }
+
+  &__card {
+    display: flex;
+    padding: 15px 0;
+    border-top: 1px solid $gray-lighter;
+  }
+
+  &__img-wrap {
+    min-width: 85px;
+    text-align: center;
+  }
+
+  &__img {
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+  &__inner {
+    width: 100%;
+  }
+
+  &__inner-wrap {
+    display: flex;
+  }
+
+  &__inner-description {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__link {
+    font-size: 12px;
+  }
+
+  &__name {
+    @include hover-opacity;
+    display: inline-block;
+    text-decoration: none;
+    color: $gray-darker;
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  &__description {
+    @include hover-opacity;
+    display: inline-block;
+    text-decoration: none;
+    color: $color-link-description;
+    font-size: 11px;
+    line-height: 17px;
+  }
+
+  &__inner-cross {
+
+  }
+
+  &__count-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__count {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__count-text {
+    font-size: 14px;
+    color: $gray;
+    margin-right: 5px;
+  }
+}

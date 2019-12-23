@@ -1,0 +1,16 @@
+.bonus {
+  color: $gray-darker;
+
+  &__item {
+    font-size: 14px;
+    line-height: 23px;
+
+    &--bb-dotted {
+      border-bottom: 1px dotted $gray;
+    }
+
+    &--color-green {
+      color: $color-link-bonus;
+    }
+  }
+}

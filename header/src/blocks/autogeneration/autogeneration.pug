@@ -1,0 +1,11 @@
+-
+  let totalResult = searchData.length
+
+mixin autogeneration(searchData, classElement)
+  section.autogeneration(class= classElement)
+    ul.autogeneration__list
+      each item in searchData
+        li.autogeneration__item
+          a.autogeneration__link(href= item.link) #{item.text}
+      li.autogeneration__item
+        a.autogeneration__link.autogeneration__link--theme-result.js-autogeneration-result(href='#') Все результаты поиска <span>(#{totalResult})</span>

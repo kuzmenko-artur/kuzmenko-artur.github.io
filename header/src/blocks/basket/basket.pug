@@ -1,0 +1,83 @@
+-
+  let totalAmount = 0;
+  let totalPrice = 0;
+  let goodsEnding;
+
+  // Подсчитываем количство товара и общую сумму
+  basketData.forEach(item => {
+    totalAmount += Number(item.quantity);
+    totalPrice += Number(item.price.new) * Number(item.quantity);
+  });
+
+  // Окончание у слова 'товар'
+  if (totalAmount === 1) {
+    goodsEnding = 'товар';
+  } else if (totalAmount > 1 && totalAmount <= 4) {
+    goodsEnding = 'товара';
+  } else {
+    goodsEnding = 'товаров';
+  }
+
+  // Разметка
+mixin basket(basketData)
+  section.basket
+    //- Если в корзине имеются товары, то выводим количество и сумму
+    if totalAmount
+      .basket__caption В корзине #{totalAmount} #{goodsEnding} на #{totalPrice} руб.
+    //- Если в корзине товары отсутствуют
+    else
+      .basket__caption В корзине пока пусто
+    ul.basket__list
+
+      //- Если в корзине имеются товары, то выводим карточки товаров
+      if basketData.length
+
+        //- Если в корзине количество товаров больше 2-ух, то выводим 2-ой блок с кнопками
+        if basketData.length > 2
+          li.basket__item
+            .basket__actions
+              button.btn Закрыть
+              button.btn.btn--medium Оформить заказ
+
+        //- Карточка товара
+        each item in basketData
+          li.basket__item
+            aricle.basket__card
+              .basket__img-wrap
+                img.basket__img(src= item.img, alt='Product')
+              .basket__inner
+                .basket__inner-wrap
+                  .basket__inner-description
+                    .basket__link
+                      a.basket__name(href= item.name.link) #{item.name.text}
+                    .basket__link
+                      a.basket__description(href= item.description.link) #{item.description.text}
+                    .price
+                      span.price__item.price__item--old #{item.price.old}
+                      span.price__item.price__item--new #{item.price.new}
+                      span.price__item.price__item--discount #{item.price.discount}
+                  .basket__inner-cross
+                    button.cross
+                .basket__count-wrap
+                  if item.bonus
+                    .bonus
+                      span.bonus__item.bonus__item--bb-dotted Бонус
+                      span.bonus__item :&nbsp;
+                      span.bonus__item.bonus__item--color-green #{item.bonus} баллов
+                  .basket__count
+                    span.basket__count-text Кол-во:
+                    .count
+                      button.count__btn.count__btn--minus
+                      input.count__input(type='text', autocomplete='off', value= item.quantity)
+                      button.count__btn.count__btn--plus
+
+        li.basket__item
+          .basket__actions
+            button.btn Закрыть
+            button.btn.btn--medium Оформить заказ
+
+      //- Если в корзине товаров нет, то выводим кнопку 'закрыть'
+      else
+        li.basket__item
+          .basket__action
+            button.btn.btn--medium Закрыть

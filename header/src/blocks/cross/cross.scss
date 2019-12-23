@@ -1,0 +1,10 @@
+.cross {
+  @include hover-opacity-scale;
+  width: $icon-search-clear-size;
+  height: $icon-search-clear-size;
+  background: url(/img/mob_close.svg);
+  background-size: cover;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

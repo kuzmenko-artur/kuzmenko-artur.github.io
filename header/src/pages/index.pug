@@ -1,0 +1,211 @@
+extends ../pug/layout.pug
+
+block meta
+  title Главная
+  meta(name='description', content='')
+
+block content
+
+  .container(style='margin-top: 700px;')
+    section.basket
+      .basket__caption В корзине 4 товара на 6186 руб.
+      ul.basket__list
+        li.basket__item
+          .basket__actions
+            button.btn Закрыть
+            button.btn.btn--medium Оформить заказ
+        li.basket__item
+          aricle.basket__card
+            .basket__img-wrap
+              img.basket__img(src='./img/1.jfif', alt='Product')
+            .basket__inner
+              .basket__inner-wrap
+                .basket__inner-description
+                  .basket__link
+                    a.basket__name(href='#') Byredo Blanche
+                  .basket__link
+                    a.basket__description(href='#') парфюмерная вода 2мл
+                  .price
+                    span.price__item.price__item--old 2987
+                    span.price__item.price__item--new 2390 руб.
+                    span.price__item.price__item--discount -20%
+                .basket__inner-cross
+                  button.cross
+              .basket__count-wrap
+                .bonus
+                  span.bonus__item.bonus__item--bb-dotted Бонус
+                  span.bonus__item :&nbsp;
+                  span.bonus__item.bonus__item--color-green 7 баллов
+                .basket__count
+                  span.basket__count-text Кол-во:
+                  .count
+                    button.count__btn.count__btn--minus
+                    input.count__input(type='text', autocomplete='off', value='1')
+                    button.count__btn.count__btn--plus
+
+        li.basket__item
+          aricle.basket__card
+            .basket__img-wrap
+              img.basket__img(src='./img/2.jfif', alt='Product')
+            .basket__inner
+              .basket__inner-wrap
+                .basket__inner-description
+                  .basket__link
+                    a.basket__name(href='#') Byredo Blanche
+                  .basket__link
+                    a.basket__description(href='#') парфюмерная вода 2мл
+                  .bonus
+                    span.bonus__item.bonus__item--bb-dotted Бонус
+                    span.bonus__item :&nbsp;
+                    span.bonus__item.bonus__item--color-green 7 баллов
+                .basket__inner-cross
+                  button.cross
+              .basket__count-wrap
+                .price
+                  span.price__item.price__item--old 2987
+                  span.price__item.price__item--new 2390 руб.
+                  span.price__item.price__item--discount -20%
+                .basket__count
+                  span.basket__count-text Кол-во:
+                  .count
+                    button.count__btn.count__btn--minus
+                    input.count__input(type='text', autocomplete='off', value='1')
+                    button.count__btn.count__btn--plus
+
+        li.basket__item
+          aricle.basket__card
+            .basket__img-wrap
+              img.basket__img(src='./img/3.jfif', alt='Product')
+            .basket__inner
+              .basket__inner-wrap
+                .basket__inner-description
+                  .basket__link
+                    a.basket__name(href='#') Byredo Blanche
+                  .basket__link
+                    a.basket__description(href='#') парфюмерная вода 2мл
+                  .price
+                    span.price__item.price__item--old 2987
+                    span.price__item.price__item--new 2390 руб.
+                    span.price__item.price__item--discount -20%
+                .basket__inner-cross
+                  button.cross
+              .basket__count-wrap
+                .basket__count
+                  span.basket__count-text Кол-во:
+                  .count
+                    button.count__btn.count__btn--minus
+                    input.count__input(type='text', autocomplete='off', value='1')
+                    button.count__btn.count__btn--plus
+
+        li.basket__item
+          aricle.basket__card
+            .basket__img-wrap
+              img.basket__img(src='./img/4.jfif', alt='Product')
+            .basket__inner
+              .basket__inner-wrap
+                .basket__inner-description
+                  .basket__link
+                    a.basket__name(href='#') Byredo Blanche
+                  .basket__link
+                    a.basket__description(href='#') парфюмерная вода 2мл
+                  .price
+                    span.price__item.price__item--old 2987
+                    span.price__item.price__item--new 2390 руб.
+                    span.price__item.price__item--discount -20%
+                .basket__inner-cross
+                  button.cross
+              .basket__count-wrap
+                .basket__count
+                  span.basket__count-text Кол-во:
+                  .count
+                    button.count__btn.count__btn--minus
+                    input.count__input(type='text', autocomplete='off', value='1')
+                    button.count__btn.count__btn--plus
+
+        li.basket__item
+          .basket__actions
+            button.btn Закрыть
+            button.btn.btn--medium Оформить заказ
+        li.basket__item
+          .basket__action
+            button.btn.btn--medium Закрыть
+
+  .container(style='margin-top: 70px;')
+    form.search(action='/search')
+      input.search__entry-field(type='text', autocomplete='off', placeholder='поиск')
+      input.cross.search__clear.js-search-clear(type='button')
+      input.search__submit.js-search-submit(type='submit', value='')
+      section.autogeneration.search__autogeneration
+        ul.autogeneration__list
+          li.autogeneration__item
+            a.autogeneration__link(href='#') Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laboriosam ullam repellendus fugiat libero tenetur, blanditiis quisquam quasi temporibus ad aliquid recusandae sed corrupti quia labore suscipit est, optio sit.
+          li.autogeneration__item
+            a.autogeneration__link(href='#') lorem
+          li.autogeneration__item
+            a.autogeneration__link(href='#') lorem
+          li.autogeneration__item
+            a.autogeneration__link(href='#') lorem
+          li.autogeneration__item
+            a.autogeneration__link(href='#') lorem
+          li.autogeneration__item
+            a.autogeneration__link.autogeneration__link--theme-result.js-autogeneration-result(href='#') Все результаты поиска <span>(2456)</span>
+
+  .container(style='margin-top: 250px;')
+    section.autogeneration
+      ul.autogeneration__list
+        li.autogeneration__item
+          a.autogeneration__link(href='#') Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laboriosam ullam repellendus fugiat libero tenetur, blanditiis quisquam quasi temporibus ad aliquid recusandae sed corrupti quia labore suscipit est, optio sit.
+        li.autogeneration__item
+          a.autogeneration__link(href='#') lorem
+        li.autogeneration__item
+          a.autogeneration__link(href='#') lorem
+        li.autogeneration__item
+          a.autogeneration__link(href='#') lorem
+        li.autogeneration__item
+          a.autogeneration__link(href='#') lorem
+        li.autogeneration__item
+          a.autogeneration__link.autogeneration__link--theme-result.js-autogeneration-result(href='#') Все результаты поиска <span>(2456)</span>
+
+  .container(style='margin-top: 50px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(5, 50px); align-items: center; justify-items: center;')
+    .wrap
+      .counter 123
+
+    .wrap
+      .bonus
+        span.bonus__item.bonus__item--bb-dotted Бонус
+        span.bonus__item :&nbsp;
+        span.bonus__item.bonus__item--color-green 7 баллов
+
+    .wrap
+      button.btn Закрыть
+
+    .wrap
+      button.btn.btn--medium Оформить заказ
+
+    .wrap
+      button.cart-informer
+        span.cart-informer__icon
+        span.counter.counter--position-icon 253
+
+    .wrap
+      .count
+        button.count__btn.count__btn--minus
+        input.count__input(type='text', autocomplete='off', value='5')
+        button.count__btn.count__btn--plus
+
+    .wrap
+      button.cross
+
+    .wrap
+      a.favorites(href='#')
+        span.favorites__icon
+        span.counter.counter--position-icon 55
+
+    .wrap
+      button.hamburger
+
+    .wrap
+    .price
+      span.price__item.price__item--old 2987
+      span.price__item.price__item--new 2390 руб.
+      span.price__item.price__item--discount -20%

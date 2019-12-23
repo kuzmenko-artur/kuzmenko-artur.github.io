@@ -1,0 +1,6 @@
+mixin search(searchData)
+  form.search(action='/search')
+    input.search__entry-field(type='text', autocomplete='off', placeholder='поиск')
+    input.cross.search__clear.js-search-clear(type='button')
+    input.search__submit.js-search-submit(type='submit', value='')
+    +autogeneration(searchData, 'search__autogeneration')

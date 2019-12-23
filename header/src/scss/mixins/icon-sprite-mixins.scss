@@ -1,0 +1,6 @@
+@mixin icon-sprite ($width, $height, $nameFile, $position) {
+  width: $width;
+  height: $height;
+  background: url(/img/#{$nameFile}) $position;
+  background-size: cover;
+}

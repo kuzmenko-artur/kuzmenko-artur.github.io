@@ -1,0 +1,14 @@
+@mixin pseudo-element-line ($bg-color, $width, $height) {
+  content: '';
+  display: block;
+  position: absolute;
+  background: $bg-color;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  margin: auto;
+  height: 2px;
+  transform: perspective(1px);
+}

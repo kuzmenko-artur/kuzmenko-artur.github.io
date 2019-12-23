@@ -1,0 +1,9 @@
+.favorites {
+  @include hover-scale;
+  display: inline-block;
+
+  &__icon {
+    @include icon-sprite ($icon-sprite-size, $icon-sprite-size, 'header_sprite.svg', 67%);
+    display: block;
+  }
+}

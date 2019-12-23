@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "globals": {
+    "require": true,
+    "document": false,
+  },
+  "rules": {
+    "strict": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

@@ -1,0 +1,7 @@
+.hamburger {
+  @include icon-sprite ($icon-sprite-size, $icon-sprite-size, 'header_sprite.svg', 0%);
+  @include hover-scale;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

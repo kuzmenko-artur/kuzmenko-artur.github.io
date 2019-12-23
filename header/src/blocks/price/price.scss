@@ -1,0 +1,22 @@
+.price {
+  margin-top: 3px;
+
+  &__item {
+    font-size: 14px;
+    margin-right: 3px;
+    line-height: 23px;
+
+    &--old {
+      color: $gray;
+      text-decoration: line-through;
+    }
+
+    &--new {
+      color: $gray-darker;
+    }
+
+    &--discount {
+      color: $color-accent-second-light;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.autogeneration {
+  width: 100%;
+  overflow: hidden;
+  border-radius: $border-radius;
+  background-color: $white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+  color: $gray-darken;
+  font-size: 12px;
+  line-height: 30px;
+  transition: all $transition-time ease;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    display: block;
+    padding: 0 $field-padding-horizontal*2;
+    color: $gray-darken;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all $transition-time ease;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:hover {
+      background: $gray-lightest;
+    }
+
+    &--theme-result {
+      background: rgba(112, 99, 197, 0.08);
+      color: $color-accent;
+      text-align: center;
+
+      &:hover {
+        background: rgba(112, 99, 197, 0.14);
+      }
+    }
+  }
+}

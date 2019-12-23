@@ -1,0 +1,76 @@
+//- Корзина с товарами
+-
+  var basketData = [
+    {img: './img/1.jfif', name: {link: '#', text: 'Byredo Blanche'}, description: {link: '#', text: 'парфюмерная вода 2мл'}, price: {old: '2987', new: '2390', discount: '-20%'}, bonus: '7', quantity: '1'},
+    {img: './img/2.jfif', name: {link: '#', text: 'Byredo Mojave Ghost'}, description: {link: '#', text: 'крем для рук 30мл'}, price: {old: '3015', new: '2261', discount: '-25%'}, bonus: false, quantity: '2'},
+    {img: './img/3.jfif', name: {link: '#', text: 'Byredo Mojave Ghost'}, description: {link: '#', text: 'парфюм для волос 75мл'}, price: {old: '4227', new: '3382', discount: '-20%'}, bonus: 'false', quantity: '3'},
+    {img: './img/4.jfif', name: {link: '#', text: 'Byredo Mojave Ghost'}, description: {link: '#', text: 'парфюмерная вода 50мл'}, price: {old: '8935', new: '7148', discount: '-15%'}, bonus: '3', quantity: '1'}
+  ]
+
+//- Результаты поиска
+-
+  var searchData =  [
+    {link: '#', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laboriosam ullam repellendus fugiat libero tenetur, blanditiis quisquam quasi temporibus ad aliquid recusandae sed corrupti quia labore suscipit est, optio sit.'},
+    {link: '#', text: 'Lorem ipsum dolor sit amet consectetur'},
+    {link: '#', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
+    {link: '#', text: 'Lorem'}
+  ]
+
+//- Стандартный шаблон страницы
+
+include mixins.pug
+
+doctype html
+html(class='no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='date=no')
+    meta(name='format-detection', content='address=no')
+    meta(name='format-detection', content='email=no')
+    meta(content='notranslate', name='google')
+
+    block meta
+      title Home
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script
+        include ../js/head-script.js
+
+  body
+    header
+      .container
+        .header.js-header
+          .header__item
+            button.hamburger
+
+          .header__item
+            .header__item-search
+              +search(searchData)
+
+          .header__item.header__item-logo
+            a.header__logo(href='/')
+              img(src='./img/logo-new-year.svg', alt='Randewoo')
+
+          .header__item
+            a.favorites(href='/cabinet/favorites')
+              span.favorites__icon
+              span.counter.counter--position-icon 55
+
+          .header__item
+            .header__basket-wrap
+              button.cart-informer.js-cart-informer
+                span.cart-informer__icon
+                span.counter.counter--position-icon 253
+              .header__basket
+                +basket(basketData)
+
+
+    block content
+      p содержимое
+
+    block page-bottom
+      script(src='js/bundle.js')

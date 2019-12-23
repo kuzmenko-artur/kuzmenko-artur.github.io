@@ -1,0 +1,17 @@
+.cart-informer {
+  @include hover-scale;
+  position: relative;
+  background: transparent;
+  margin: 0;
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+
+  &__icon {
+    @include icon-sprite ($icon-sprite-size, $icon-sprite-size, 'header_sprite.svg', 99.5%);
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
