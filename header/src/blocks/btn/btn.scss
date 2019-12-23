@@ -12,6 +12,7 @@
   outline: none;
   cursor: pointer;
   text-decoration: none;
+  user-select: none;
 
   &--medium {
     font-weight: 700;

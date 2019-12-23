@@ -20,27 +20,20 @@
   }
 
   &__link {
+    @include hover-background($gray-lightest);
     display: block;
     padding: 0 $field-padding-horizontal*2;
     color: $gray-darken;
     text-decoration: none;
     overflow: hidden;
-    transition: all $transition-time ease;
     white-space: nowrap;
     text-overflow: ellipsis;
 
-    &:hover {
-      background: $gray-lightest;
-    }
-
     &--theme-result {
+      @include hover-background(rgba(112, 99, 197, 0.14));
       background: rgba(112, 99, 197, 0.08);
       color: $color-accent;
       text-align: center;
-
-      &:hover {
-        background: rgba(112, 99, 197, 0.14);
-      }
     }
   }
 }

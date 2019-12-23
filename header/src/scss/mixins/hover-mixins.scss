@@ -2,34 +2,63 @@
   transform: perspective(1px);
   backface-visibility: hidden;
   transition: transform $transition-time ease;
-
-  &:hover {
-    transform: scale($transform-scale-increase) perspective(1px);
-  }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:active {
-    transform: scale($transform-scale-increase * 0.9) perspective(1px);
+    transform: scale($transform-scale-reduce) perspective(1px);
   }
+
+  // &:hover {
+  //   transform: scale($transform-scale-increase) perspective(1px);
+  // }
+
+  // &:active {
+  //   transform: scale($transform-scale-increase * 0.9) perspective(1px);
+  // }
 }
 
 @mixin hover-opacity {
   transition: opacity $transition-time ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  &:hover {
+  &:active {
     opacity: $opacity;
   }
+
+  // &:hover {
+  //   opacity: $opacity;
+  // }
 }
 
 @mixin hover-opacity-scale {
   transform: perspective(1px);
   backface-visibility: hidden;
   transition: opacity $transition-time ease, transform $transition-time-fast ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  &:hover {
-    opacity: $opacity;
-  }
+  // &:hover {
+  //   opacity: $opacity;
+  // }
 
   &:active {
+    opacity: $opacity;
     transform: scale($transform-scale-reduce) perspective(1px);
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+}
+
+@mixin hover-background ($background) {
+  transition: all $transition-time ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:active {
+    background: $background;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
