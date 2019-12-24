@@ -30,7 +30,7 @@ function showSearchBar() {
 // Скрываем строку поиска в шапке
 function hideSearchBar() {
   let headerSearchDescendants  = headerSearch.querySelectorAll('*');
-  headerSearchDescendants = Array.prototype.slice.call(headerSearchDescendants); //Из DOM коллекция делаем массив
+  headerSearchDescendants = Array.prototype.slice.call(headerSearchDescendants); // Из DOM коллекция делаем массив
 
   if ( event.target !== headerSearch && !headerSearchDescendants.some(item => event.target === item) ) {
     headerSearch.removeAttribute('style');

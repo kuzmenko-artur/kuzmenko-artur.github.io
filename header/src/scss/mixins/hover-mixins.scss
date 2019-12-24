@@ -4,17 +4,23 @@
   transition: transform $transition-time ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  &:active {
-    transform: scale($transform-scale-reduce) perspective(1px);
+  &:hover {
+
+    .no-touch & {
+      transform: scale($transform-scale-increase) perspective(1px);
+    }
   }
 
-  // &:hover {
-  //   transform: scale($transform-scale-increase) perspective(1px);
-  // }
+  &:active {
 
-  // &:active {
-  //   transform: scale($transform-scale-increase * 0.9) perspective(1px);
-  // }
+    .touch & {
+      transform: scale($transform-scale-reduce) perspective(1px);
+    }
+
+    .no-touch & {
+      transform: scale($transform-scale-increase * 0.9) perspective(1px);
+    }
+  }
 }
 
 @mixin hover-opacity {
@@ -22,12 +28,18 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:active {
-    opacity: $opacity;
+
+    .touch & {
+      opacity: $opacity;
+    }
   }
 
-  // &:hover {
-  //   opacity: $opacity;
-  // }
+  &:hover {
+
+    .no-touch & {
+      opacity: $opacity;
+    }
+  }
 }
 
 @mixin hover-opacity-scale {
@@ -36,13 +48,19 @@
   transition: opacity $transition-time ease, transform $transition-time-fast ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  // &:hover {
-  //   opacity: $opacity;
-  // }
+  &:hover {
+
+    .no-touch & {
+      opacity: $opacity;
+    }
+  }
 
   &:active {
-    opacity: $opacity;
     transform: scale($transform-scale-reduce) perspective(1px);
+
+    .touch & {
+      opacity: $opacity;
+    }
   }
 
   &:focus {
@@ -54,8 +72,18 @@
   transition: all $transition-time ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
+  &:hover {
+
+    .no-touch & {
+      background: $background;
+    }
+  }
+
   &:active {
-    background: $background;
+
+    .touch & {
+      background: $background;
+    }
   }
 
   &:focus {
