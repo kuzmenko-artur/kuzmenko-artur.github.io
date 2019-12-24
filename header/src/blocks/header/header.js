@@ -72,10 +72,8 @@ function resize() {
   // Ресайзим корзину
   headerWidth =  header.offsetWidth;
   basketHeight = basket.offsetHeight;
-  if (header.classList.contains("header--basket-open")) {
-    resizeBasketWidth();
-    resizeBasketHeight(basketHeight);
-  }
+  resizeBasketWidth();
+  resizeBasketHeight(basketHeight);
 }
 
 window.addEventListener('resize', resize);
